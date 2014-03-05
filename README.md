@@ -2,7 +2,7 @@
 
 A chainable mock object for making assertions about `ActiveRecord::Relation` instances.
 
-(Further reading.)[http://www.foraker.com/isolating-and-testing-active-record-dependencies/]
+[Further reading.](http://www.foraker.com/isolating-and-testing-active-record-dependencies/)
 
 ## Installation
 

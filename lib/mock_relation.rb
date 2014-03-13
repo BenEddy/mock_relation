@@ -21,8 +21,8 @@ class MockRelation < Hash
   end
 
   def record_invocation(scope, *args)
-    clone.tap do |clone|
-      clone[scope] = fetch(scope, []).push(args)
+    self.tap do |relation|
+      relation[scope] = fetch(scope, []).push(args)
     end
   end
 

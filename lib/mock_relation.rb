@@ -14,6 +14,24 @@ class MockRelation < Hash
     fetch(scope, []).include?(args)
   end
 
+  def includes(*args)
+    self
+  end
+  alias :joins :includes
+  alias :scoped :includes
+
+  def unscoped
+    clone.clear
+  end
+
+  def destroy_all
+    @destroyed = true
+  end
+
+  def destroyed?
+    @destroyed
+  end
+
   private
 
   def mocks_scope?(scope)
